@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    border: none;
+}
+
+nav {
+    background: #E5D9F2;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-en {
+    display: inline-block;
+    background: #A594F9;
+    color: #433878;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.contenedor {
+    background-color: #F5EFFF;
+    padding: 15px 5%; /* Reducido a 5% para pantallas pequeñas */
+    padding-bottom: 100px;
+}
+
+.contenedor .titulo {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.contenedor .subcontenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.contenedor .subcontenedor .con {
+    box-shadow: 0 5px 10px #F5EFFF;
+    border-radius: 8px;
+    text-align: center;
+    background: #A594F9;
+    padding: 30px 20px;
+}
+
+.contenedor .subcontenedor .con img {
+    width: 100%;
+    height: auto;
+    max-height: 350px; /* Ajustar la altura máxima */
+    border-radius: 8px; /* Añadir un borde redondeado */
+}
+
+.contenedor .subcontenedor .con h3 {
+    color: #433878;
+    font-size: 22px;
+    padding: 10px;
+}
+
+.contenedor .subcontenedor .con p {
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.contenedor .subcontenedor .con .btn {
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #E4B1F0;
+    font-size: 15px;
+    border-radius: 8px;
+    padding: 8px 25px;
+}
+
+.contenedor .subcontenedor .con:hover {
+    box-shadow: 0 0px 15px #ed08ed;
+    transform: scale(1.05);
+}
+
+.contenedor .subcontenedor .con .btn:hover {
+    letter-spacing: 2px;
+    background: #7776B3;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .contenedor {
+        padding: 10px 2%; /* Reducido aún más para pantallas pequeñas */
+    }
+    
+    .contenedor .subcontenedor {
+        grid-template-columns: 1fr; /* Forzar una columna en pantallas pequeñas */
+    }
+
+    .contenedor .subcontenedor .con {
+        padding: 20px; /* Ajustar el padding para pantallas pequeñas */
+    }
+
+    .contenedor .subcontenedor .con img {
+        max-height: 250px; /* Reducir el tamaño de las imágenes */
+    }
+}
+
+/* Media Queries para pantallas muy grandes */
+@media (min-width: 1024px) {
+    .contenedor .subcontenedor {
+        gap: 30px; /* Incrementar el espacio entre las columnas */
+    }
+
+    .contenedor .subcontenedor .con {
+        padding: 40px; /* Aumentar el padding en pantallas grandes */
+    }
+}
